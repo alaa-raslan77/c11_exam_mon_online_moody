@@ -26,6 +26,7 @@ class _ChoiceMoodState extends State<ChoiceMood> {
         SizedBox(width: 10,),
         buildMoodChip( 'assets/images/sad.png'),
         SizedBox(width: 26,)
+
       ],
     );
 
