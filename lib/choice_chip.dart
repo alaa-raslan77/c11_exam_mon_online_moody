@@ -18,19 +18,19 @@ class _ChoiceMoodState extends State<ChoiceMood> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _buildMoodChip( 'assets/images/love.png'),
+        buildMoodChip( 'assets/images/love.png'),
         SizedBox(width: 10,),
-        _buildMoodChip( 'assets/images/cool.png'),
+        buildMoodChip( 'assets/images/cool.png'),
         SizedBox(width: 10,),
-        _buildMoodChip( 'assets/images/happy.png'),
+        buildMoodChip( 'assets/images/happy.png'),
         SizedBox(width: 10,),
-        _buildMoodChip( 'assets/images/sad.png'),
+        buildMoodChip( 'assets/images/sad.png'),
         SizedBox(width: 26,)
       ],
     );
 
   }
-  Widget _buildMoodChip( String assetPath) {
+  Widget buildMoodChip( String assetPath) {
     return ChoiceChip(
       padding: EdgeInsets.only(bottom: 1,left: 1,right: 1,top: 10),
 
