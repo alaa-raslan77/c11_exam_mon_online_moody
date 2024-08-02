@@ -60,7 +60,6 @@ class MoodyScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: AppColors.Primary),),
             Row(children: [
-
             ],)
           ],
 
