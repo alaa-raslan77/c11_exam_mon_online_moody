@@ -66,11 +66,12 @@ class _MoodyScreenState extends State<MoodyScreen> {
                       color: AppColors.Primary),),
                 ],
               ),
-              SizedBox(height: 10,),
-              Text("How are you feeling today",style:
+              SizedBox(height: 20,),
+              Text("How are you feeling today ?",style:
               GoogleFonts.inter(fontSize: 16,
                   fontWeight: FontWeight.w600,
                   color: AppColors.Primary),),
+              SizedBox(height: 20,),
               ChoiceMood(),
               Row(children: [
                 SizedBox(width: 20,),

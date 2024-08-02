@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:chips_choice/chips_choice.dart';
 class ChoiceMood extends StatefulWidget {
    ChoiceMood({super.key});
 
@@ -8,36 +7,50 @@ class ChoiceMood extends StatefulWidget {
 }
 
 class _ChoiceMoodState extends State<ChoiceMood> {
-  int tag = 3;
-  List<String> options = [
-    'News', 'Entertainment', 'Politics',
-    'Automotive', 'Sports', 'Education',
-    'Fashion', 'Travel', 'Food', 'Tech',
-    'Science',
-  ];
+  bool isSelected=false;
+  String selectedMood = '';
+
+
 
   @override
   Widget build(BuildContext context) {
 
-    return  Padding(
-      padding: const EdgeInsets.only(top: 15),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-
-        CircleAvatar(backgroundImage: AssetImage("assets/images/love.png"),radius: 35,),
-        SizedBox(width: 20,),
-        CircleAvatar(backgroundImage: AssetImage("assets/images/cool.png"),radius: 35,),
-          SizedBox(width: 20,),
-
-        CircleAvatar(backgroundImage: AssetImage("assets/images/happy.png"),radius: 35,),
-          SizedBox(width: 20,),
-
-        CircleAvatar(backgroundImage: AssetImage("assets/images/sad.png"),radius: 35,),
-          SizedBox(width: 28,),
-
-      ],),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _buildMoodChip( 'assets/images/love.png'),
+        SizedBox(width: 10,),
+        _buildMoodChip( 'assets/images/cool.png'),
+        SizedBox(width: 10,),
+        _buildMoodChip( 'assets/images/happy.png'),
+        SizedBox(width: 10,),
+        _buildMoodChip( 'assets/images/sad.png'),
+        SizedBox(width: 26,)
+      ],
     );
 
+  }
+  Widget _buildMoodChip( String assetPath) {
+    return ChoiceChip(
+      padding: EdgeInsets.only(bottom: 1,left: 1,right: 1,top: 10),
+
+      backgroundColor: Color(0xffE4E7EC),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100),side: BorderSide(color: Color(0xffE4E7EC))),
+
+      selected: false,
+      label: Column(
+        children: [
+          Image.asset(assetPath, width:60,fit: BoxFit.fill,),
+          SizedBox(height: 10),
+
+        ],
+      ),
+
+      onSelected: (bool selected) {
+        setState(() {
+
+        });
+      },
+    );
   }
 }
